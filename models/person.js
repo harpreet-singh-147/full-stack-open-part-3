@@ -6,7 +6,7 @@ const url = process.env.MONGODB_URI;
 
 mongoose
   .connect(url)
-  .then(result => console.log('connected to MongoDB'))
+  .then(() => console.log('connected to MongoDB'))
   .catch(e => console.log(`error connecting to MongoDB: ${e.message}`));
 
 const nameValidator = {
